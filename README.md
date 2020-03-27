@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Redux Basics Sample project
+###Sample Project to demonstrate Redux with multiple reducers. 
 
-## Available Scripts
+##NOTES
 
-In the project directory, you can run:
+The aim of Redux is to enable the usage of state globally for every components.
 
-### `yarn start`
+In React, data flow from one components to another is done from parent component to child component.
+If two different components in the same level of hierarchy needs the same data (state), then we need to manage the data 
+in a higher level of component (in general practice..)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Thanks to redux, we have a global management of state and all components able to read and update the state globally.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Even the boiler plate code (setup) code of Redux is a lot, i still think its a good approach to solve the problem with a
+good architectural pattern. (a simple observable/pub-sub implementation, in Observable pattern there is a subject 
+and there are a number of Observes watching the subject and change the state accordingly)
 
-### `yarn test`
+here for wiki [https://en.wikipedia.org/wiki/Observer_pattern]
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##There are four important elements fo redux:
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Store
+`Store is the global state`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Actions
+`Actions are type definitions and payloads of events, those will be used in upating the store (hence state)`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Reducers
+`This is the place where we are updating the state. In general, for each action we need a different reducers to operate.`
 
-### `yarn eject`
+### Dispatch
+`Dispatch is the function that is used to trigger an action`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+ 
