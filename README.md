@@ -17,7 +17,7 @@ and there are a number of Observes watching the subject and change the state acc
 
 here for wiki [https://en.wikipedia.org/wiki/Observer_pattern]
 
-## There are four important elements fo redux:
+## There are four important elements of redux:
 
 
 ### Store
