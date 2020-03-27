@@ -1,7 +1,7 @@
-#Redux Basics Sample project
-###Sample Project to demonstrate Redux with multiple reducers. 
+# Redux Basics Sample project
+### Sample Project to demonstrate Redux with multiple reducers. 
 
-##NOTES
+## NOTES
 
 The aim of Redux is to enable the usage of state globally for every components.
 
@@ -17,7 +17,7 @@ and there are a number of Observes watching the subject and change the state acc
 
 here for wiki [https://en.wikipedia.org/wiki/Observer_pattern]
 
-##There are four important elements fo redux:
+## There are four important elements fo redux:
 
 
 ### Store
